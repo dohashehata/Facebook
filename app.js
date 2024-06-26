@@ -8,7 +8,7 @@ import postRouter from './modules/posts/posts.routes.js';
 import commentRouter from './modules/comment/comment.routes.js';
 
 const app = express();
-const port = 3000;
+const port =process.env.PORT ||3000;
 app.use(express.json());
 
 sequelize.authenticate().then(() => {
