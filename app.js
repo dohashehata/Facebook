@@ -6,11 +6,11 @@ import Comment from './database/models/comment.model.js';
 import userRouter from './modules/user/user.routes.js';
 import postRouter from './modules/posts/posts.routes.js';
 import commentRouter from './modules/comment/comment.routes.js';
-
+import cors from ' cors'
 const app = express();
 const port =process.env.PORT ||3000;
 app.use(express.json());
-
+app.use(cors())
 sequelize.authenticate().then(() => {
   console.log('Database connected.');
 
